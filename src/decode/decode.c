@@ -34,6 +34,8 @@
  *     e5089. https://doi.org/10.1002/cpe.5089.
  */
 
+#include <inttypes.h> // PRIu64 for portable uint64_t format specifier
+
 #include "decode.h"
 #include "cleanup.h"
 #include "decode_internal.h"
@@ -246,9 +248,9 @@ ret_t decode(OUT e_t *e, IN const ct_t *ct, IN const sk_t *sk)
     const uint8_t threshold = get_threshold(&s);
 
     DMSG("    Iteration: %d\n", iter);
-    DMSG("    Weight of e: %llu\n",
+    DMSG("    Weight of e: %" PRIu64 "\n",
          r_bits_vector_weight(&e->val[0]) + r_bits_vector_weight(&e->val[1]));
-    DMSG("    Weight of syndrome: %llu\n", r_bits_vector_weight((r_t *)s.qw));
+    DMSG("    Weight of syndrome: %" PRIu64 "\n", r_bits_vector_weight((r_t *)s.qw));
 
     find_err1(e, &black_e, &gray_e, &s, sk->wlist, threshold, &ctx);
     GUARD(recompute_syndrome(&s, &c0, &h0, &pk, e, &ctx));
@@ -257,16 +259,16 @@ ret_t decode(OUT e_t *e, IN const ct_t *ct, IN const sk_t *sk)
       continue;
     }
 #endif
-    DMSG("    Weight of e: %llu\n",
+    DMSG("    Weight of e: %" PRIu64 "\n",
          r_bits_vector_weight(&e->val[0]) + r_bits_vector_weight(&e->val[1]));
-    DMSG("    Weight of syndrome: %llu\n", r_bits_vector_weight((r_t *)s.qw));
+    DMSG("    Weight of syndrome: %" PRIu64 "\n", r_bits_vector_weight((r_t *)s.qw));
 
     find_err2(e, &black_e, &s, sk->wlist, ((D + 1) / 2) + 1, &ctx);
     GUARD(recompute_syndrome(&s, &c0, &h0, &pk, e, &ctx));
 
-    DMSG("    Weight of e: %llu\n",
+    DMSG("    Weight of e: %" PRIu64 "\n",
          r_bits_vector_weight(&e->val[0]) + r_bits_vector_weight(&e->val[1]));
-    DMSG("    Weight of syndrome: %llu\n", r_bits_vector_weight((r_t *)s.qw));
+    DMSG("    Weight of syndrome: %" PRIu64 "\n", r_bits_vector_weight((r_t *)s.qw));
 
     find_err2(e, &gray_e, &s, sk->wlist, ((D + 1) / 2) + 1, &ctx);
     GUARD(recompute_syndrome(&s, &c0, &h0, &pk, e, &ctx));
