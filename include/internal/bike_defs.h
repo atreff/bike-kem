@@ -18,7 +18,33 @@
 #  define LEVEL 1
 #endif
 
-#if(LEVEL == 3)
+#if(LEVEL == 0)
+#  define R_BITS 2053
+#  define D      23
+#  define T      42
+
+#  define THRESHOLD_COEFF0 5.9823
+#  define THRESHOLD_COEFF1 0.0176796
+#  define THRESHOLD_MIN    12
+
+// The gf2m code is optimized to a block in this case:
+#  define BLOCK_BITS 4096
+# define MAX_RAND_INDICES_T 271 // taken from level 1
+
+#elif(LEVEL == 10)
+#  define R_BITS 7109
+#  define D      41
+#  define T      42
+
+#  define THRESHOLD_COEFF0 13.530
+#  define THRESHOLD_COEFF1 0.0069722
+#  define THRESHOLD_MIN    21
+
+// The gf2m code is optimized to a block in this case:
+#  define BLOCK_BITS 8192
+# define MAX_RAND_INDICES_T 271  // taken from level 1
+
+#elif(LEVEL == 3)
 #  define R_BITS 24659
 #  define D      103
 #  define T      199
@@ -54,7 +80,7 @@
 // The gf2x code is optimized to a block in this case:
 #  define BLOCK_BITS       (16384)
 #else
-#  error "Bad level, choose one of 1/3/5"
+#  error "Bad level, choose one of 0/10/1/3"
 #endif
 
 #define NUM_OF_SEEDS 2

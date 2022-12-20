@@ -70,7 +70,33 @@ _INLINE_ void repeated_squaring(OUT pad_r_t *c,
 //   exp1_k = [(r-2)%(2^i) if ((r-2) & (1<<i)) else 0 for i in range(max_i)]
 //   exp1_l = [inverse_mod((2^k) % r, r) if k != 0 else 0 for k in exp1_k]
 
-#if(LEVEL == 1)
+#if(LEVEL == 0)
+// The parameters below are hard-coded for R=2053
+bike_static_assert((R_BITS == 2053), gf2x_inv_r_doesnt_match_parameters);
+
+// MAX_I = floor(log(r-2)) + 1
+#  define MAX_I (12)
+#  define EXP0_K_VALS \
+    1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048
+#  define EXP0_L_VALS                                                           \
+    1027, 1540, 385, 409, 988, 969, 740, 1502, 1810, 1565, 2049, 16
+#  define EXP1_K_VALS 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3
+#  define EXP1_L_VALS 0, 1027, 0, 0, 0, 0, 0, 0, 0, 0, 0, 770
+
+#elif(LEVEL == 10)
+// The parameters below are hard-coded for R=7109
+bike_static_assert((R_BITS == 7109), gf2x_inv_r_doesnt_match_parameters);
+
+// MAX_I = floor(log(r-2)) + 1
+#  define MAX_I (13)
+#  define EXP0_K_VALS \
+    1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096
+#  define EXP0_L_VALS                                                           \
+    3555, 5332, 1333, 6748, 2359, 5643, 2238, 3908, 2332, 6948, 4594, 5324, 1393
+#  define EXP1_K_VALS 0, 1, 0, 0, 0, 0, 3, 67, 195, 451, 0, 963, 3011
+#  define EXP1_L_VALS 0, 3555, 0, 0, 0, 0, 2666, 2057, 5586, 2864, 0, 981, 4838
+
+#elif(LEVEL == 1)
 // The parameters below are hard-coded for R=12323
 bike_static_assert((R_BITS == 12323), gf2x_inv_r_doesnt_match_parameters);
 
