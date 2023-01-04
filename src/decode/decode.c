@@ -56,10 +56,28 @@
 #    define MAX_IT 5
 #  elif(LEVEL == 3)
 #    define MAX_IT 5
+#  elif(LEVEL == 0)
+#    define MAX_IT 5
 #  elif(LEVEL == 10)
 #    define MAX_IT 5
+#  elif(LEVEL == 11)
+#    define MAX_IT 5
+#  elif(LEVEL == 12)
+#    define MAX_IT 5
+#  elif(LEVEL == 13)
+#    define MAX_IT 5
+#  elif(LEVEL == 14)
+#    define MAX_IT 5
+#  elif(LEVEL == 15)
+#    define MAX_IT 5
+#  elif(LEVEL == 16)
+#    define MAX_IT 5
+#  elif(LEVEL == 17)
+#    define MAX_IT 5
+#  elif(LEVEL == 18)
+#    define MAX_IT 5
 #  else
-#    error "Level can only be 1/3"
+#    error "Level can only be 1/3/0/10/11/12/13/14/15/16/17/18"
 #  endif
 #endif
 

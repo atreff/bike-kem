@@ -96,6 +96,126 @@ bike_static_assert((R_BITS == 7109), gf2x_inv_r_doesnt_match_parameters);
 #  define EXP1_K_VALS 0, 1, 0, 0, 0, 0, 3, 67, 195, 451, 0, 963, 3011
 #  define EXP1_L_VALS 0, 3555, 0, 0, 0, 0, 2666, 2057, 5586, 2864, 0, 981, 4838
 
+#elif(LEVEL == 11)
+// The parameters below are hard-coded for R=773
+bike_static_assert((R_BITS == 773), gf2x_inv_r_doesnt_match_parameters);
+
+// MAX_I = floor(log(r-2)) + 1
+#  define  MAX_I (10)
+#  define  EXP0_K_VALS \
+    1, 2, 4, 8, 16, 32, 64, 128, 256, 512
+#  define  EXP0_L_VALS \
+    387, 580, 145, 154, 526, 715, 272, 549, 704, 123
+#  define  EXP1_K_VALS \
+    0, 1, 0, 0, 0, 0, 0, 0, 3, 259
+#  define  EXP1_L_VALS \
+    0, 387, 0, 0, 0, 0, 0, 0, 290, 88
+
+#elif(LEVEL == 12)
+// The parameters below are hard-coded for R=1019
+bike_static_assert((R_BITS == 1019), gf2x_inv_r_doesnt_match_parameters);
+
+// MAX_I = floor(log(r-2)) + 1
+#  define  MAX_I (10)
+#  define  EXP0_K_VALS \
+    1, 2, 4, 8, 16, 32, 64, 128, 256, 512
+#  define  EXP0_L_VALS \
+    510, 255, 828, 816, 449, 858, 446, 211, 704, 382
+#  define  EXP1_K_VALS \
+    0, 0, 0, 1, 9, 25, 57, 121, 249, 505
+#  define  EXP1_L_VALS \
+    0, 0, 0, 510, 408, 791, 24, 514, 440, 1003
+
+#elif(LEVEL == 13)
+// The parameters below are hard-coded for R=1283
+bike_static_assert((R_BITS == 1283), gf2x_inv_r_doesnt_match_parameters);
+
+// MAX_I = floor(log(r-2)) + 1
+#  define  MAX_I (11)
+#  define  EXP0_K_VALS \
+    1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024
+#  define  EXP0_L_VALS \
+    642, 321, 401, 426, 573, 1164, 48, 1021, 645, 333, 551
+#  define  EXP1_K_VALS \
+    0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 257
+#  define  EXP1_L_VALS \
+    0, 0, 0, 0, 0, 0, 0, 0, 642, 0, 964
+
+#elif(LEVEL == 14)
+// The parameters below are hard-coded for R=2029
+bike_static_assert((R_BITS == 2029), gf2x_inv_r_doesnt_match_parameters);
+
+// MAX_I = floor(log(r-2)) + 1
+#  define  MAX_I (11)
+#  define  EXP0_K_VALS \
+    1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024
+#  define  EXP0_L_VALS \
+    1015, 1522, 1395, 214, 1158, 1824, 1445, 184, 1392, 1998, 961
+#  define  EXP1_K_VALS \
+    0, 1, 0, 3, 0, 11, 43, 107, 235, 491, 1003
+#  define  EXP1_L_VALS \
+    0, 1015, 0, 761, 0, 534, 96, 748, 1689, 1506, 2010
+
+#elif(LEVEL == 15)
+// The parameters below are hard-coded for R=2053
+bike_static_assert((R_BITS == 2053), gf2x_inv_r_doesnt_match_parameters);
+
+// MAX_I = floor(log(r-2)) + 1
+#  define  MAX_I (12)
+#  define  EXP0_K_VALS \
+    1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048
+#  define  EXP0_L_VALS \
+    1027, 1540, 385, 409, 988, 969, 740, 1502, 1810, 1565, 2049, 16
+#  define  EXP1_K_VALS \
+    0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3
+#  define  EXP1_L_VALS \
+    0, 1027, 0, 0, 0, 0, 0, 0, 0, 0, 0, 770
+
+#elif(LEVEL == 16)
+// The parameters below are hard-coded for R=2069
+bike_static_assert((R_BITS == 2069), gf2x_inv_r_doesnt_match_parameters);
+
+// MAX_I = floor(log(r-2)) + 1
+#  define  MAX_I (12)
+#  define  EXP0_K_VALS \
+    1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048
+#  define  EXP0_L_VALS \
+    1035, 1552, 388, 1576, 976, 836, 1643, 1473, 1417, 959, 1045, 1662
+#  define  EXP1_K_VALS \
+    0, 1, 0, 0, 3, 0, 0, 0, 0, 0, 0, 19
+#  define  EXP1_L_VALS \
+    0, 1035, 0, 0, 776, 0, 0, 0, 0, 0, 0, 122
+
+#elif(LEVEL == 17)
+// The parameters below are hard-coded for R=4021
+bike_static_assert((R_BITS == 4021), gf2x_inv_r_doesnt_match_parameters);
+
+// MAX_I = floor(log(r-2)) + 1
+#  define  MAX_I (12)
+#  define  EXP0_K_VALS \
+    1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048
+#  define  EXP0_L_VALS \
+    2011, 3016, 754, 1555, 1404, 926, 1003, 759, 1078, 15, 225, 2373
+#  define  EXP1_K_VALS \
+    0, 1, 0, 0, 3, 19, 0, 51, 179, 435, 947, 1971
+#  define  EXP1_L_VALS \
+    0, 2011, 0, 0, 1508, 2186, 0, 1673, 3192, 3021, 1084, 2640
+
+#elif(LEVEL == 18)
+// The parameters below are hard-coded for R=4099
+bike_static_assert((R_BITS == 4099), gf2x_inv_r_doesnt_match_parameters);
+
+// MAX_I = floor(log(r-2)) + 1
+#  define  MAX_I (13)
+#  define  EXP0_K_VALS \
+    1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096
+#  define  EXP0_L_VALS \
+    2050, 1025, 1281, 1361, 3672, 1973, 2778, 2966, 702, 924, 1184, 4097, 4
+#  define  EXP1_K_VALS \
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+#  define  EXP1_L_VALS \
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2050
+
 #elif(LEVEL == 1)
 // The parameters below are hard-coded for R=12323
 bike_static_assert((R_BITS == 12323), gf2x_inv_r_doesnt_match_parameters);

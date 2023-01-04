@@ -44,6 +44,110 @@
 #  define BLOCK_BITS 8192
 # define MAX_RAND_INDICES_T 271  // taken from level 1
 
+#elif(LEVEL == 11)
+#  define  R_BITS 773
+#  define  D      9
+#  define  T      34
+
+#  define  THRESHOLD_COEFF0 3.98287671232877
+#  define  THRESHOLD_COEFF1 0.0171232876712329
+#  define  THRESHOLD_MIN    5
+
+// The gf2m code is optimized to a block in this case:
+#  define  BLOCK_BITS 1024
+# define MAX_RAND_INDICES_T 271  // taken from level 1
+
+#elif(LEVEL == 12)
+#  define  R_BITS 1019
+#  define  D      13
+#  define  T      39
+
+#  define  THRESHOLD_COEFF0 5.98516949152542
+#  define  THRESHOLD_COEFF1 0.0148305084745763
+#  define  THRESHOLD_MIN    7
+
+// The gf2m code is optimized to a block in this case:
+#  define  BLOCK_BITS 1024
+# define MAX_RAND_INDICES_T 271  // taken from level 1
+
+#elif(LEVEL == 13)
+#  define  R_BITS 1283
+#  define  D      15
+#  define  T      43
+
+#  define  THRESHOLD_COEFF0 5.98664440734558
+#  define  THRESHOLD_COEFF1 0.0133555926544240
+#  define  THRESHOLD_MIN    8
+
+// The gf2m code is optimized to a block in this case:
+#  define  BLOCK_BITS 2048
+# define MAX_RAND_INDICES_T 271  // taken from level 1
+
+#elif(LEVEL == 14)
+#  define  R_BITS 2029
+#  define  D      21
+#  define  T      54
+
+#  define  THRESHOLD_COEFF0 6.98743961352657
+#  define  THRESHOLD_COEFF1 0.0125603864734300
+#  define  THRESHOLD_MIN    11
+# define MAX_RAND_INDICES_T 271  // taken from level 1
+
+// The gf2m code is optimized to a block in this case:
+#  define  BLOCK_BITS 2048
+
+#elif(LEVEL == 15)
+#  define  R_BITS 2053
+#  define  D      23
+#  define  T      55
+
+#  define  THRESHOLD_COEFF0 7.98765432098765
+#  define  THRESHOLD_COEFF1 0.0123456790123457
+#  define  THRESHOLD_MIN    12
+
+// The gf2m code is optimized to a block in this case:
+#  define  BLOCK_BITS 4096
+# define MAX_RAND_INDICES_T 271  // taken from level 1
+
+#elif(LEVEL == 16)
+#  define  R_BITS 2069
+#  define  D      23
+#  define  T      55
+
+#  define  THRESHOLD_COEFF0 7.98679577464789
+#  define  THRESHOLD_COEFF1 0.0132042253521127
+#  define  THRESHOLD_MIN    12
+
+// The gf2m code is optimized to a block in this case:
+#  define  BLOCK_BITS 4096
+# define MAX_RAND_INDICES_T 271  // taken from level 1
+
+#elif(LEVEL == 17)
+#  define  R_BITS 4021
+#  define  D      35
+#  define  T      76
+
+#  define  THRESHOLD_COEFF0 8.98932536293766
+#  define  THRESHOLD_COEFF1 0.0106746370623399
+#  define  THRESHOLD_MIN    18
+
+// The gf2m code is optimized to a block in this case:
+#  define  BLOCK_BITS 4096
+# define MAX_RAND_INDICES_T 271  // taken from level 1
+
+#elif(LEVEL == 18)
+#  define  R_BITS 4099
+#  define  D      35
+#  define  T      77
+
+#  define  THRESHOLD_COEFF0 8.98948254101809
+#  define  THRESHOLD_COEFF1 0.0105174589819100
+#  define  THRESHOLD_MIN    18
+
+// The gf2m code is optimized to a block in this case:
+#  define  BLOCK_BITS 8192
+# define MAX_RAND_INDICES_T 271  // taken from level 1
+
 #elif(LEVEL == 3)
 #  define R_BITS 24659
 #  define D      103
